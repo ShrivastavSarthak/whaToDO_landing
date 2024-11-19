@@ -2,6 +2,8 @@ const {
   default: flattenColorPalette,
 } = require("tailwindcss/lib/util/flattenColorPalette");
 
+const hideScrollBar = require("tailwind-scrollbar");
+
 /** @type {import('tailwindcss').Config} */
 module.exports = {
   content: [
@@ -15,6 +17,15 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      // scrollbar: {
+      //   hide: {
+      //     "&::-webkit-scrollbar": {
+      //       display: "none",
+      //     },
+      //     "-ms-overflow-style": "none", // For IE and Edge
+      //     "scrollbar-width": "none", // For Firefox
+      //   },
+      // },
       animation: {
         shimmer: "shimmer 2s linear infinite",
       },
@@ -30,7 +41,7 @@ module.exports = {
       },
     },
   },
-  plugins: [addVariablesForColors],
+  plugins: [hideScrollBar, addVariablesForColors],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).
