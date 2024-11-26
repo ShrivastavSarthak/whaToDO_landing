@@ -66,7 +66,7 @@ const CARDS = [
 export default function Service() {
   return (
     <>
-      <div className="hidden sm:block">
+      <div className="hidden sm:block bg-[#2D3250]">
         <div className="flex flex-col overflow-hidden">
           <ContainerScroll
             titleComponent={

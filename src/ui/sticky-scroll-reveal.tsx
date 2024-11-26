@@ -64,7 +64,7 @@ export const StickyScroll = ({
       animate={{
         backgroundColor: backgroundColors[activeCard % backgroundColors.length],
       }}
-      className="h-[30rem] overflow-y-auto flex justify-around relative space-x-10 rounded-md p-10 scrollbar-none"
+      className="h-[100vh] overflow-y-auto flex justify-around relative space-x-10 rounded-md p-10 scrollbar-none"
       ref={ref}
     >
       <div className="div relative flex items-start px-4">
@@ -101,14 +101,14 @@ export const StickyScroll = ({
       <div
         // style={{ background: backgroundGradient }}
         className={cn(
-          "hidden lg:block  w-[40rem] rounded-md  sticky top-10 overflow-hidden",
+          "hidden lg:block  w-[40rem] rounded-md  sticky top-1 overflow-hidden",
           contentClassName
         )}
       >
-        <h1 className=" text-[3.5rem] font-semibold text-gray-400 dark:text-white">
+        <h1 className=" text-center text-[3rem] font-semibold text-gray-400 dark:text-white">
           What we want to Change?
         </h1>
-        {/* {content[activeCard].content ?? null} */}
+        {content[activeCard].content ?? null}
       </div>
     </motion.div>
   );
