@@ -2,26 +2,189 @@
 @tailwind components;
 @tailwind utilities;
 
-:root {
+/* :root {
   --background: #ffffff;
   --foreground: #171717;
-}
+} */
 
-@media (prefers-color-scheme: dark) {
+/* @media (prefers-color-scheme: dark) {
   :root {
     --background: #0a0a0a;
     --foreground: #ededed;
   }
-}
+} */
 
 body {
   color: var(--foreground);
   background: var(--background);
   font-family: Arial, Helvetica, sans-serif;
+  overflow-x: hidden;
 }
+
+
+
+.hero-image {
+  background-image: url("../public/hero_bg.jpg");
+  background-size: cover;
+  background-position: center;
+  height: 100vh;
+  background-blend-mode: multiply;
+  background-color: #f0f0f0; 
+}
+
 
 @layer utilities {
   .text-balance {
     text-wrap: balance;
   }
 }
+
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #868484;
+  border-radius: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #4b4b4b;
+  border-radius: 20px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #555;
+}
+
+/* For Firefox */
+* {
+  scrollbar-width: thin;
+  scrollbar-color: #888 #b8b8b8;
+}
+
+@layer base {
+  /* Default font sizes for small screens */
+  h1 {
+    font-size: 3rem; /* Base size */
+  }
+  h2 {
+    font-size: 1rem;
+  }
+  h3 {
+    font-size: 1.5rem;
+  }
+  h4 {
+    font-size: 1.25rem;
+  }
+  h5 {
+    font-size: 1.125rem;
+  }
+  h6 {
+    font-size: 1rem;
+  }
+  p, span {
+    font-size: 0.875rem; /* Smaller text */
+  }
+
+  /* Medium screens: min-width 640px */
+  @media (min-width: 640px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.25rem;
+    }
+    h3 {
+      font-size: 2rem;
+    }
+    h4 {
+      font-size: 1.75rem;
+    }
+    h5 {
+      font-size: 1.5rem;
+    }
+    h6 {
+      font-size: 1.25rem;
+    }
+    p, span {
+      font-size: 1rem;
+    }
+  }
+
+  /* Large screens: min-width 768px */
+  @media (min-width: 768px) {
+    h1 {
+      font-size: 3rem;
+    }
+    h2 {
+      font-size: 2.75rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+    }
+    h4 {
+      font-size: 2.25rem;
+    }
+    h5 {
+      font-size: 2rem;
+    }
+    h6 {
+      font-size: 1.75rem;
+    }
+    p, span {
+      font-size: 1.125rem;
+    }
+  }
+
+  /* Extra large screens: min-width 1024px */
+  @media (min-width: 1024px) {
+    h1 {
+      font-size: 3.5rem;
+    }
+    h2 {
+      font-size: 3rem;
+    }
+    h3 {
+      font-size: 2.5rem;
+    }
+    h4 {
+      font-size: 2rem;
+    }
+    h5 {
+      font-size: 1.5rem;
+    }
+    h6 {
+      font-size: 1.25rem;
+    }
+    p, span {
+      font-size: 1.125rem;
+    }
+  }
+
+  /* Extra extra large screens: min-width 1280px */
+  @media (min-width: 1280px) {
+    h1 {
+      font-size: 4rem;
+    }
+    h2 {
+      font-size: 3.5rem;
+    }
+    h3 {
+      font-size: 3rem;
+    }
+    h4 {
+      font-size: 2.5rem;
+    }
+    h5 {
+      font-size: 2rem;
+    }
+    h6 {
+      font-size: 1.5rem;
+    }
+    p, span {
+      font-size: 1.25rem;
+    }
+  }
+}
+

@@ -1,8 +1,10 @@
-"use client";
-import React from "react";
-import Image from "next/image";
 import { StickyScroll } from "@/ui/sticky-scroll-reveal";
 import image1 from "@/public/Icon1.svg";
+import Image from "next/image";
+import parentImage1 from "@/public/whoWeAre/ParentImage1.svg"
+import parentImage2 from "@/public/whoWeAre/ParentImage2.svg"
+import parentImage3 from "@/public/whoWeAre/ParentImage3.svg"
+import parentImage4 from "@/public/whoWeAre/ParentImage4.svg"
 
 const content = [
   {
@@ -12,7 +14,7 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src={image1}
+          src={parentImage1}
           width={500}
           height={500}
           // className="h-full w-full object-cover"
@@ -28,9 +30,9 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src={image1}
-          width={500}
-          height={500}
+          src={parentImage2}
+          width={400}
+          height={40}
           // className="h-full w-full object-cover"
           alt="image1"
         />
@@ -44,9 +46,9 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src={image1}
-          width={500}
-          height={500}
+          src={parentImage3}
+          width={450}
+          height={450}
           // className="h-full w-full object-cover"
           alt="image1"
         />
@@ -60,9 +62,9 @@ const content = [
     content: (
       <div className="h-full w-full  flex items-center justify-center text-white">
         <Image
-          src={image1}
-          width={500}
-          height={500}
+          src={parentImage4}
+          width={450}
+          height={450}
           // className="h-full w-full object-cover"
           alt="image1"
         />
@@ -71,10 +73,6 @@ const content = [
   },
 ];
 
-export default function Change() {
-  return (
-    <div >
-      <StickyScroll content={content} />
-    </div>
-  );
+export default function WhoWeAre() {
+  return <StickyScroll content={content} />;
 }

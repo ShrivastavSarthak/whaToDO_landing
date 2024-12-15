@@ -17,6 +17,13 @@ module.exports = {
   darkMode: "class",
   theme: {
     extend: {
+      fontSize: {
+        base: ["16px", "1.5"],
+        lg: ["18px", "1.6"],
+        xl: ["20px", "1.7"],
+        "2xl": ["24px", "1.8"],
+        "3xl": ["30px", "1.9"],
+      },
       // scrollbar: {
       //   hide: {
       //     "&::-webkit-scrollbar": {
@@ -28,6 +35,7 @@ module.exports = {
       // },
       animation: {
         shimmer: "shimmer 2s linear infinite",
+        "meteor-effect": "meteor 5s linear infinite",
       },
       keyframes: {
         shimmer: {
@@ -38,10 +46,22 @@ module.exports = {
             backgroundPosition: "-200% 0",
           },
         },
+        meteor: {
+          "0%": { transform: "rotate(215deg) translateX(0)", opacity: "1" },
+          "70%": { opacity: "1" },
+          "100%": {
+            transform: "rotate(215deg) translateX(-500px)",
+            opacity: "0",
+          },
+        },
       },
     },
   },
-  plugins: [hideScrollBar, addVariablesForColors],
+  plugins: [
+    hideScrollBar,
+    addVariablesForColors,
+    require("@tailwindcss/typography"),
+  ],
 };
 
 // This plugin adds each Tailwind color as a global CSS variable, e.g. var(--gray-200).

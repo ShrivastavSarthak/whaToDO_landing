@@ -58,14 +58,14 @@ export const FlipWords = ({
           position: "absolute",
         }}
         className={cn(
-          "z-10 inline-block relative text-left text-neutral-500 dark:text-neutral-100 font-bold px-2",
+          "z-10 inline-block relative  text-left text-[#FF7F3E] dark:text-[#80C4E9] font-bold px-2",
           className
         )}
         key={currentWord}
       >
         {/* edit suggested by Sajal: https://x.com/DewanganSajal */}
         {currentWord.split(" ").map((word, wordIndex) => (
-          <motion.span
+          <motion.div
             key={word + wordIndex}
             initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
             animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -76,7 +76,7 @@ export const FlipWords = ({
             className="inline-block whitespace-nowrap"
           >
             {word.split("").map((letter, letterIndex) => (
-              <motion.span
+              <motion.h5
                 key={word + letterIndex}
                 initial={{ opacity: 0, y: 10, filter: "blur(8px)" }}
                 animate={{ opacity: 1, y: 0, filter: "blur(0px)" }}
@@ -87,10 +87,10 @@ export const FlipWords = ({
                 className="inline-block"
               >
                 {letter}
-              </motion.span>
+              </motion.h5>
             ))}
             <span className="inline-block">&nbsp;</span>
-          </motion.span>
+          </motion.div>
         ))}
       </motion.div>
     </AnimatePresence>

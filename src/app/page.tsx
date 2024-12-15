@@ -1,15 +1,14 @@
-import { About } from "@/components/about";
-import Change from "@/components/change";
 import Head from "@/components/home/head";
 import Service from "@/components/home/services";
+import WhoWeAre from "@/components/home/whoWeAre";
 
 export default function Home() {
   return (
     <>
       <Head />
+      <WhoWeAre/>
       <Service />
-      <Change />
-      <About />
+      {/* <About />  */}
     </>
   );
 }

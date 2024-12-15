@@ -3,19 +3,19 @@ import { MaskContainer } from "../ui/svg-mask-effect";
 
 export function About() {
   return (
-    <div className="h-[100vh] flex items-center justify-center  overflow-hidden">
+    <div className="h-[50vh] flex items-center justify-center  overflow-hidden">
       <MaskContainer
         revealText={
           <p className=" mx-auto text-slate-800 text-center  text-4xl font-bold">
-            The first rule of MRR Club is you do not talk about MRR Club. The
-            second rule of MRR Club is you DO NOT talk about MRR Club.
+            Monitor your child's activities with balance—stay involved, set
+            boundaries, and guide them without invading their privacy.
           </p>
         }
         className="h-full "
       >
-        The first rule of <span className="text-red-500">MRR Club</span> is you
-        do not talk about MRR Club. The second rule of MRR Club is you DO NOT
-        talk about <span className="text-red-500">MRR Club</span>.
+        Trust grows when <span className="text-red-500">safety</span> and
+        
+        <span className="text-red-500">respect</span> go hand in hand.
       </MaskContainer>
     </div>
   );

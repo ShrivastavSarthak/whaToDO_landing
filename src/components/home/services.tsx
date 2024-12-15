@@ -1,94 +1,54 @@
-import { cn } from "@/lib/utils";
-import { CardStack } from "@/ui/card-stack";
-import { ContainerScroll } from "@/ui/container-scroll-animation";
-import ServiceSection from "../serviceSection";
+import { Meteors } from "@/ui/meteors";
 
-export const Highlight = ({
-  children,
-  className,
-}: {
-  children: React.ReactNode;
-  className?: string;
-}) => {
-  return (
-    <span
-      className={cn(
-        "font-bold bg-emerald-100 text-emerald-700 dark:bg-emerald-700/[0.2] dark:text-emerald-500 px-1 py-0.5",
-        className
-      )}
-    >
-      {children}
-    </span>
-  );
-};
-
-const CARDS = [
+const plans = [
   {
-    id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
-    content: (
-      <p>
-        These cards are amazing, <Highlight>I want to use them</Highlight> in my
-        project. Framer motion is a godsend ngl tbh fam 🙏
-      </p>
-    ),
+    planName: "free_plan",
+    planFor: "Basic Plan",
+    price: "0",
+    features: [
+      "Basic TODO App",
+      "No realtime data",
+      "Not much Interaction",
+      "Limited task per day",
+      "Add 1 parent",
+    ],
+    description:
+      "This plan is perfect for children. It offers basic editing and collaboration features, helps them to make there goal achieve.",
   },
   {
-    id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
-    content: (
-      <p>
-        I dont like this Twitter thing,{" "}
-        <Highlight>deleting it right away</Highlight> because yolo. Instead, I
-        would like to call it <Highlight>X.com</Highlight> so that it can easily
-        be confused with adult sites.
-      </p>
-    ),
-  },
-  {
-    id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
-    content: (
-      <p>
-        The first rule of
-        <Highlight>Fight Club</Highlight> is that you do not talk about fight
-        club. The second rule of
-        <Highlight>Fight club</Highlight> is that you DO NOT TALK about fight
-        club.
-      </p>
-    ),
+    planName: "premium_plan",
+    planFor: "Advanced Plan",
+    price: "$5",
+    features: [
+      "Advance TODO App",
+      "Realtime data",
+      "unlimited tasks",
+      "Add 2 parents",
+      "Add Reward to cheer up",
+    ],
+    description:
+      "This plan is perfect for children. It offers basic editing and collaboration features, helps them to make there goal achieve.",
   },
 ];
 
 export default function Service() {
   return (
-    <>
-      <div className="hidden sm:block bg-[#2D3250]">
-        <div className="flex flex-col overflow-hidden">
-          <ContainerScroll
-            titleComponent={
-              <>
-                <h1 className="text-4xl font-semibold text-gray-400 dark:text-white">
-                  What are <br />
-                  <span className="text-4xl md:text-[6rem] font-bold mt-1 leading-none">
-                    Services
-                  </span>
-                </h1>
-              </>
-            }
-          >
-            <ServiceSection />
-          </ContainerScroll>
+    <div className=" bg-[#FFF6E9]">
+      <div className=" container mx-auto flex flex-col justify-center items-center p-5">
+        <h1 className="font-bold text-[#4335A7]">Our Services</h1>
+        <div className="grid xl:grid-cols-2 lg:grid-cols-2 md:grid-cols-2 sm:grid-cols-1 xs:grid-cols-1 gap-10 w-full  mt-10">
+          {plans.map((plan, index) => (
+            <div key={index} className=" w-full relative ">
+              <div className="absolute inset-0 h-full w-full bg-gradient-to-r from-blue-500 to-teal-500 transform scale-[0.80] bg-red-500 rounded-full blur-3xl" />
+              <div className="relative shadow-xl bg-gray-900 border border-gray-800  px-4 py-8 h-full overflow-hidden rounded-2xl flex flex-col justify-end items-start">
+                
+                
+                <Meteors number={20} />
+              </div>
+            </div>
+          ))}
         </div>
       </div>
-      <div className="block sm:block xs:block md:hidden lg:hidden xl:hidden">
-        <div className="h-[40rem] flex items-start justify-center w-full mt-10 px-3">
-          <CardStack items={CARDS} />
-        </div>
-      </div>
-    </>
+    </div>
   );
 }
