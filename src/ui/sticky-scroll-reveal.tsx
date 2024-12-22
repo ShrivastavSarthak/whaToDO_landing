@@ -102,6 +102,7 @@ export const StickyScroll = ({
           contentClassName
         )}
       >
+        <h1 className={`font-bold  text-4xl text-[#4335A7] bg-white text-center sticky  top- z-10`}>Why Choose TaskNest?</h1>
         {content[activeCard].content ?? null}
       </div>
     </motion.div>
