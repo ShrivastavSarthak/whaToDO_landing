@@ -42,7 +42,7 @@ export default function Testimonials() {
     <div className="bg-[#4335A7]">
       <div className="mx-auto py-10 container ">
         <h3 className="text-center text-[#FFF6E9] font-extrabold">
-          Testimonials Section?
+          Testimonials Section
         </h3>
         <h5 className="text-center text-[#FF7F3E] font-bold mb-5">
           Loved by Families Everywhere
