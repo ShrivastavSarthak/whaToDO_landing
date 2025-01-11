@@ -34,17 +34,18 @@ const cardData =[
 export default function Work() {
   return (
     <div className="bg-[#FF7F3E]">
-      <div className="container mx-auto py-10">
+      <div className="container mx-auto py-10 ">
         <h3 className="text-center text-[#FFF6E9] font-extrabold">
           How It Works Section?
         </h3>
         <h5 className="text-center text-[#4335A7] font-bold mb-5">
           Get Started in 3 Easy Steps
         </h5>
-        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 gap-24">
+        <div className="grid xl:grid-cols-3 lg:grid-cols-3 md:grid-cols-1 sm:grid-cols-1 xs:grid-cols-1 gap-24 p-2 ">
           {cardData.map((card, index) => (
               <WobbleCard>
                 <div
+                  className="p-2"
                   key={index}
                 >
                   <Image src={card.image} alt="signup" width={500} height={500} />
