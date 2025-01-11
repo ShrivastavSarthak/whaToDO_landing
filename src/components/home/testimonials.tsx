@@ -39,7 +39,7 @@ const CARDS = [
 
 export default function Testimonials() {
   return (
-    <div className="bg-[#4335A7]">
+    <div className="bg-[#4335A7] min-h-[25rem] px-2">
       <div className="mx-auto py-10 container ">
         <h3 className="text-center text-[#FFF6E9] font-extrabold">
           Testimonials Section
