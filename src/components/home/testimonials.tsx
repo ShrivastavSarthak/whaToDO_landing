@@ -3,35 +3,31 @@ import { CardStack } from "@/ui/card-stack";
 const CARDS = [
   {
     id: 0,
-    name: "Manu Arora",
-    designation: "Senior Software Engineer",
+    name: "Jane Doe",
+    designation: "Mother of Two",
     content: (
       <p>
-        These cards are amazing, I want to use them in my project. Framer motion
-        is a godsend ngl tbh fam 🙏
+        This child care service has been a lifesaver for our family. The staff is incredibly attentive and caring. Highly recommend!
       </p>
     ),
   },
   {
     id: 1,
-    name: "Elon Musk",
-    designation: "Senior Shitposter",
+    name: "John Smith",
+    designation: "Father of Three",
     content: (
       <p>
-        I dont like this Twitter thing, deleting it right away because yolo.
-        Instead, I would like to call it X.com so that it can easily be confused
-        with adult sites.
+        The child monitoring system gives us peace of mind knowing that our kids are safe and well taken care of. We couldn't be happier with the service.
       </p>
     ),
   },
   {
     id: 2,
-    name: "Tyler Durden",
-    designation: "Manager Project Mayhem",
+    name: "Emily Johnson",
+    designation: "Working Mom",
     content: (
       <p>
-        The first rule of Fight Club is that you do not talk about fight club.
-        The second rule of Fight club is that you DO NOT TALK about fight club.
+        Balancing work and parenting is tough, but this service makes it so much easier. The caregivers are professional and trustworthy.
       </p>
     ),
   },
