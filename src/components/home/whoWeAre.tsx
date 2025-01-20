@@ -104,7 +104,7 @@ export default function WhoWeAre() {
       </div>
 
       <div className="hidden md:block sm:hidden xs:block">
-        <StickyScroll content={content} />;
+        <StickyScroll content={content} />
       </div>
     </>
   );

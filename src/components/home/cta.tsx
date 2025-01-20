@@ -1,4 +1,5 @@
 "use client";
+import { Cover } from "@/ui/cover";
 import { useRouter } from "next/navigation";
 
 export default function CallToAction() {
@@ -13,7 +14,14 @@ export default function CallToAction() {
       <div className="bg-[#80C4E9]">
         <div className="container mx-auto ">
           <div className="flex flex-col justify-center items-center p-5">
-            <h2 className="font-bold text-[#4335A7]">Ready to Get Started?</h2>
+            <h2 className="font-bold text-[#4335A7]">
+              Ready to Get{" "}
+              <Cover>
+                {" "}
+                <h2 className="text-[#4335A7]">Started ?</h2>
+              </Cover>{" "}
+              
+            </h2>
             <h6 className="text-[#FFF6E9] ">
               Join us today and start your journey to a better future for your
               children.

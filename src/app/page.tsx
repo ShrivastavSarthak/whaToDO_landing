@@ -4,6 +4,7 @@ import Testimonials from "@/components/home/testimonials";
 import WhoWeAre from "@/components/home/whoWeAre";
 import Work from "@/components/home/work";
 import CallToAction from "@/components/home/cta";
+import Footer from "@/components/home/footer";
 export default function Home() {
   return (
     <>
@@ -13,7 +14,7 @@ export default function Home() {
       <Testimonials/>
       <Service />
       <CallToAction/>
-      {/* <About />  */}
+      <Footer/>
     </>
   );
 }
